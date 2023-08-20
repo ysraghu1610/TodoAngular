@@ -1,0 +1,12 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark" >
+    <div *ngIf = 'this.hardCodedAuthenticatiom.isUserLoggedIn()' ><a routerLink="" class="navbar-brand">Home</a></div>
+    <ul class="navbar-nav" *ngIf = 'this.hardCodedAuthenticatiom.isUserLoggedIn()'>
+      <li><a routerLink="/todos" class="nav-link">Todos</a></li>
+    </ul>
+    <ul class="navbar-nav navbar-collapse justify-content-end">
+      <li *ngIf = '!this.hardCodedAuthenticatiom.isUserLoggedIn()'><a routerLink="/login" class="nav-link">login</a></li>
+      <li><a routerLink="/logout" class="nav-link">logout</a></li>
+    </ul>
+  </nav>
+</header>
